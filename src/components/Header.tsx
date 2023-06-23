@@ -21,6 +21,7 @@ function Header() {
 					<span>{siteConfig.name}</span>
 				</div>
 				{/* HamborgurMenu */}
+				
 				{/* Options */}
 			</div>
 			{/* Links */}
