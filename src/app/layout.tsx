@@ -5,6 +5,7 @@ import { Montserrat } from "next/font/google"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
+import Header from "@/components/Header"
 import Providers from "@/components/Providers"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
@@ -36,7 +37,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
 		<html lang="en" suppressHydrationWarning>
 			<body className={cn("min-h-screen antialiased", inter.className)}>
 				<Providers>
-					{children}
+					<div className="container">
+						<Header />
+						{children}
+					</div>
 					<TailwindIndicator />
 				</Providers>
 			</body>
