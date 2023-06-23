@@ -1,3 +1,10 @@
+import Header from "@/components/Header"
+
 export default function IndexPage() {
-	return <></>
+	return (
+		<div className="container">
+			<Header />
+			{/* TODO: Nav */}
+		</div>
+	)
 }
