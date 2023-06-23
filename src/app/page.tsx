@@ -1,10 +1,7 @@
-import Header from "@/components/Header"
+import { usePathname } from "next/navigation"
 
 export default function IndexPage() {
-	return (
-		<div className="container">
-			<Header />
-			{/* TODO: Nav */}
-		</div>
-	)
+	const pathname = usePathname()
+
+	return <div>{pathname}</div>
 }
