@@ -1,7 +1,7 @@
 import "@/styles/globals.css"
 
 import { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Montserrat } from "next/font/google"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
@@ -10,10 +10,10 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 
 export const metadata: Metadata = {
 	title: {
-		default: siteConfig.name,
-		template: `%s - ${siteConfig.name}`,
+		default: `${siteConfig.name}'s Blog`,
+		template: `%s - ${siteConfig.name}'s Blog`,
 	},
-	description: siteConfig.description,
+	description: siteConfig.bio,
 	themeColor: [
 		{ media: "(prefers-color-scheme: light)", color: "white" },
 		{ media: "(prefers-color-scheme: dark)", color: "black" },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 	},
 }
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Montserrat({ subsets: ["latin"] })
 
 interface RootLayoutProps {
 	children: React.ReactNode

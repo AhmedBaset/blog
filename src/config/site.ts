@@ -1,7 +1,11 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-	name: "Next.js",
+	name: "Ahmed AbdulBaset",
+	bio: "Full Stack Developer enjoying building things with Next.js",
+
+
+
 	title: "Next.js Starter Template",
 	description:
 		"Next.js starter template with TypseScript, ESLint, Prettier, Tailwind CSS, and Shadcn/ui",
