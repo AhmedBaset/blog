@@ -1,4 +1,3 @@
-
 import { ImageResponse, type NextRequest } from "next/server"
 
 export const runtime = "edge"
@@ -13,7 +12,7 @@ export function generateStaticPaths() {
 			},
 		},
 	]
-} 
+}
 
 export function GET(req: NextRequest) {
 	const title = req.nextUrl.searchParams.get("title") || ""
@@ -62,7 +61,7 @@ export function GET(req: NextRequest) {
 				<div
 					key="link-block"
 					style={{
-						width: "60%",
+						maxWidth: "80%",
 						height: "2.5rem",
 						backgroundColor: "#133c7f",
 						color: "#fff",
@@ -72,11 +71,20 @@ export function GET(req: NextRequest) {
 						borderRadius: "0.35rem",
 					}}
 				>
-					<span key="space" style={{ width: "1rem" }}>
+					<span
+						key="space"
+						style={{ width: "1rem", whiteSpace: "nowrap" }}
+					>
 						{" "}
 					</span>
 					<span key="link" style={{ fontSize: "1rem" }}>
 						{process.env.NEXT_PUBLIC_URL}/{link}
+					</span>
+					<span
+						key="space-2"
+						style={{ width: "1rem", whiteSpace: "nowrap" }}
+					>
+						{" "}
 					</span>
 				</div>
 			</div>

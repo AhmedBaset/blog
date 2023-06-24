@@ -5,7 +5,6 @@ import { Montserrat } from "next/font/google"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import AboutMe from "@/components/AboutMe"
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import Providers from "@/components/Providers"
@@ -39,14 +38,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
 		<html lang="en" suppressHydrationWarning>
 			<body
 				className={cn(
-					"min-h-screen bg-white antialiased dark:bg-slate-950",
+					"grid min-h-screen grid-rows-[auto,1fr,auto] bg-white antialiased dark:bg-slate-950",
 					inter.className
 				)}
 			>
 				<Providers>
 					<Header />
 					{children}
-					<AboutMe />
 					<Footer />
 					<TailwindIndicator />
 				</Providers>

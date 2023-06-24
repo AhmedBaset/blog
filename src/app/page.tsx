@@ -1,6 +1,7 @@
 import { allPosts } from "contentlayer/generated"
 import { compareDesc } from "date-fns"
 
+import AboutMe from "@/components/AboutMe"
 import PostCard from "@/components/PostCard"
 
 export default function Index() {
@@ -9,16 +10,19 @@ export default function Index() {
 	)
 
 	return (
-		<div className="container mx-auto max-w-6xl py-8">
-			<h1 className="mb-8 text-center text-2xl font-black">
-				Welcome to my blog!
-			</h1>
+		<>
+			<div className="container mx-auto max-w-6xl py-8">
+				<h1 className="mb-8 text-center text-2xl font-black">
+					Welcome to my blog!
+				</h1>
 
-			<div className="grid-cols-auto grid gap-3">
-				{posts.map((post, idx) => (
-					<PostCard key={idx} {...post} />
-				))}
+				<div className="grid-cols-auto mb-4 grid gap-3">
+					{posts.map((post, idx) => (
+						<PostCard key={idx} {...post} />
+					))}
+				</div>
 			</div>
-		</div>
+			<AboutMe isHome />
+		</>
 	)
 }

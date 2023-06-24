@@ -17,7 +17,7 @@ export default async function PostCard({ title, description, url }: Post) {
 			<Card>
 				<CardContent className="p-0">
 					<Image
-						src={getImage({ title, description })}
+						src={getImage({ title, description, url })}
 						alt={title}
 						className="aspect-video w-full rounded-lg"
 						width={300}
