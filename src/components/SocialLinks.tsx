@@ -1,14 +1,10 @@
 "use client"
 
-import {
-	Tooltip,
-	TooltipContent,
-	TooltipTrigger,
-} from "@radix-ui/react-tooltip"
-import Link  from "next/link"
+import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
+import { Tooltip, TooltipContent, TooltipTrigger } from "@shadcn/tooltip"
 
 import { buttonVariants } from "./ui/button"
 
