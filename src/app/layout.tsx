@@ -35,12 +35,15 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className={cn("min-h-screen antialiased", inter.className)}>
+			<body
+				className={cn(
+					"min-h-screen bg-white antialiased dark:bg-slate-950",
+					inter.className
+				)}
+			>
 				<Providers>
-					<div className="container">
-						<Header />
-						{children}
-					</div>
+					<Header />
+					{children}
 					<TailwindIndicator />
 				</Providers>
 			</body>
