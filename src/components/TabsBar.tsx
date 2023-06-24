@@ -14,7 +14,11 @@ function TabsBar() {
 			key={href}
 			variant="ghost"
 			asChild
-			className={pathname === href ? "border-b-3 border-white" : ""}
+			className={`rounded-none ${
+				pathname === href
+					? "border-b-4 border-slate-700/50 dark:border-white/50"
+					: ""
+			}`}
 		>
 			<Link href={href}>{name}</Link>
 		</Button>
