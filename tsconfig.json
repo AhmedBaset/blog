@@ -22,9 +22,10 @@
 		],
 		"paths": {
 			"@/*": ["./src/*"],
-			"@shadcn/*": ["./src/components/ui/*"]
+			"@shadcn/*": ["./src/components/ui/*"],
+			"contentlayer/generated": ["./.contentlayer/generated"]
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "*.ts", ".next/types/**/*.ts"],
-	"exclude": ["node_modules"]
+	"exclude": ["node_modules"],
 }
