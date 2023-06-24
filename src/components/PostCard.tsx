@@ -10,6 +10,7 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@shadcn/card"
+import { Skeleton } from "@shadcn/skeleton"
 
 export default async function PostCard({ title, description, url }: Post) {
 	return (
@@ -34,5 +35,21 @@ export default async function PostCard({ title, description, url }: Post) {
 				</CardHeader>
 			</Card>
 		</Link>
+	)
+}
+
+export function PostCardSkeleton() {
+	return (
+		<Card>
+			<CardContent className="p-0">
+				<Skeleton className="width-full aspect-video rounded-lg" />
+			</CardContent>
+			<CardHeader>
+				<Skeleton className="mb-2 h-8 w-9/12" />
+				<Skeleton className="mb-1 h-4 w-full" />
+				<Skeleton className="mb-1 h-4 w-full" />
+				<Skeleton className="h-4 w-9/12" />
+			</CardHeader>
+		</Card>
 	)
 }

@@ -2,8 +2,8 @@ import { Badge } from "@shadcn/badge"
 
 function page() {
 	return (
-		<main className="container space-y-4 py-12 max-w-4xl">
-			<h1 className="font-extrabold text-5xl">Lorem Ipsum</h1>
+		<main className="container max-w-4xl space-y-4 py-12">
+			<h1 className="text-5xl font-extrabold">Lorem Ipsum</h1>
 			<p className="text-opacity-70">This page is a placeholder for now.</p>
 			<Badge>TODO:</Badge> <span>add more content</span>
 			<p>

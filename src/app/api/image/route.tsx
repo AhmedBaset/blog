@@ -2,18 +2,6 @@ import { ImageResponse, type NextRequest } from "next/server"
 
 export const runtime = "edge"
 
-export function generateStaticPaths() {
-	return [
-		{
-			params: {
-				title: "Hello World",
-				description: "This is a description",
-				link: "link",
-			},
-		},
-	]
-}
-
 export function GET(req: NextRequest) {
 	const title = req.nextUrl.searchParams.get("title") || ""
 	const description = req.nextUrl.searchParams.get("description") || ""
