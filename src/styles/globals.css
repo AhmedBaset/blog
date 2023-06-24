@@ -7,3 +7,9 @@
       @apply flex items-center justify-center;
    }
 }
+
+@layer utilities {
+   .grid-cols-auto {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   }
+}
