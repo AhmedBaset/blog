@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Avatar, AvatarFallback, AvatarImage } from "@shadcn/avatar"
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {}
+interface Props extends React.HTMLAttributes<HTMLAnchorElement> {}
 function Logo({ className, ...props }: Props) {
 	return (
 		<Link href="/" className={cn("flex-center gap-2", className)} {...props}>
