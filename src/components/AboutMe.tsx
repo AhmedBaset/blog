@@ -7,16 +7,22 @@ import { Button } from "@shadcn/button"
 
 import SocialLinks from "./SocialLinks"
 
-interface AboutMeProps {}
+interface AboutMeProps {
+	isHome?: boolean
+	className?: string
+}
 
-function AboutMe({}: AboutMeProps) {
+function AboutMe({ isHome = false, className }: AboutMeProps) {
 	return (
-		<section className="flex-center">
+		<section className={cn({ "flex-center": !isHome }, className)}>
 			<div
 				className={cn(
 					"bg-slate-50 dark:bg-slate-800",
 					"flex-center flex-col gap-2 p-4",
-					"md:border-1 border-slate-500/20 md:sticky md:top-4 md:rounded-xl"
+					{
+						"md:border-1 border-slate-500/20 md:sticky md:top-4 md:rounded-xl":
+							!isHome,
+					}
 				)}
 			>
 				<Image

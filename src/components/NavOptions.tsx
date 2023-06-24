@@ -9,7 +9,7 @@ function NavOptions() {
 			<Button variant="ghost" size="icon">
 				<Search />
 			</Button>
-			<Button variant="ghost" size="icon" asChild>
+			<Button variant="ghost" size="icon" className="sticky top-0" asChild>
 				<ThemeToggle />
 			</Button>
 		</div>
