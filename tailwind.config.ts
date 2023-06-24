@@ -1,6 +1,5 @@
+import typoghraphyPlugin from "@tailwindcss/typography"
 import { Config } from "tailwindcss"
-
-import { shadcnPlugin } from "@/lib/shadcnPlugin"
 
 const config = {
 	darkMode: ["class"],
@@ -8,6 +7,7 @@ const config = {
 	plugins: [
 		require("tailwindcss-animate"),
 		require("./src/lib/shadcnPlugin").shadcnPlugin,
+		typoghraphyPlugin,
 	],
 } satisfies Config
 
