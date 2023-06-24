@@ -1,24 +1,15 @@
-import { notFound } from "next/navigation";
-import { allPosts } from "contentlayer/generated"
+import { Metadata } from "next"
+import { notFound } from "next/navigation"
+import { allPosts, Post } from "contentlayer/generated"
 import { format } from "date-fns"
-import { Metadata } from "next";
 
-function getPost(slug: string) : Post {
-   const post = allPosts.find((post) => post.url === slug)
+import { getImage } from "@/lib/getImage"
+
+function getPost(slug: string): Post {
+	const post = allPosts.find((post) => post.url === slug)
 	if (!post) notFound()
-   return post
+	return post
 }
-
-export function generateMetadata({params: {slug}}: Props): Metadata {
-   const {title, description} = getPost(slug)
-
-   return {
-      title,
-      description,
-      
-   }
-}
-
 
 interface Props {
 	params: {
@@ -26,8 +17,35 @@ interface Props {
 	}
 }
 
+export function generateMetadata({ params: { slug } }: Props): Metadata {
+	const post = getPost(slug)
+	const { title, description } = post
+
+	return {
+		title,
+		description,
+		openGraph: {
+			title,
+			description,
+			type: "article",
+			images: [
+				{
+					url: getImage(post),
+					alt: title,
+					width: 800,
+					height: 450,
+				},
+			],
+		},
+	}
+}
+
+export function generateStaticPaths(): Path {
+	
+}
+
 function page({ params: { slug } }: Props) {
-   const post = getPost(slug)
+	const post = getPost(slug)
 
 	return (
 		<main>
@@ -35,10 +53,10 @@ function page({ params: { slug } }: Props) {
 				<h1>{post.title}</h1>
 				<p>{post.description}</p>
 				<p>{format(new Date(post.date), "MMMM dd, yyyy")}</p>
-         </header>
-         <article>
-            
-         </article>
+			</header>
+			<article>
+				
+			</article>
 		</main>
 	)
 }
