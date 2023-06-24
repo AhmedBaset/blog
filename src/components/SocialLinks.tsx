@@ -5,7 +5,7 @@ import {
 	TooltipContent,
 	TooltipTrigger,
 } from "@radix-ui/react-tooltip"
-import { Link } from "lucide-react"
+import Link  from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
@@ -19,7 +19,7 @@ function SocialLinks({
 	return (
 		<ul className={cn("flex flex-wrap gap-2", className)} {...props}>
 			{siteConfig.links.map(({ label, href, Icon }) => (
-				<li>
+				<li key={href}>
 					<Tooltip>
 						<TooltipTrigger asChild>
 							<Link
