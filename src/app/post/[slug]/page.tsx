@@ -1,5 +1,24 @@
-import { notFound } from "next/navigation"
+import { notFound } from "next/navigation";
 import { allPosts } from "contentlayer/generated"
+import { format } from "date-fns"
+import { Metadata } from "next";
+
+function getPost(slug: string) : Post {
+   const post = allPosts.find((post) => post.url === slug)
+	if (!post) notFound()
+   return post
+}
+
+export function generateMetadata({params: {slug}}: Props): Metadata {
+   const {title, description} = getPost(slug)
+
+   return {
+      title,
+      description,
+      
+   }
+}
+
 
 interface Props {
 	params: {
@@ -8,14 +27,19 @@ interface Props {
 }
 
 function page({ params: { slug } }: Props) {
-	const post = allPosts.find((post) => post.url === slug)
-
-	if (!post) notFound()
+   const post = getPost(slug)
 
 	return (
-		<div>
-			<h1>{post.title}</h1>
-		</div>
+		<main>
+			<header>
+				<h1>{post.title}</h1>
+				<p>{post.description}</p>
+				<p>{format(new Date(post.date), "MMMM dd, yyyy")}</p>
+         </header>
+         <article>
+            
+         </article>
+		</main>
 	)
 }
 
