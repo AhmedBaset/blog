@@ -1,5 +1,6 @@
-// contentlayer.config.ts
-import { defineDocumentType, makeSource } from "contentlayer/source-files"
+
+import { defineDocumentType, makeSource } from "contentlayer/source-files";
+
 
 export const Post = defineDocumentType(() => ({
 	name: "Post",
@@ -13,7 +14,7 @@ export const Post = defineDocumentType(() => ({
 		url: {
 			type: "string",
 			resolve: (post) =>
-				`/post/${post._raw.flattenedPath.split("-").slice(1).join("-")}`,
+				post._raw.flattenedPath.split("-").slice(1).join("-"),
 		},
 	},
 }))

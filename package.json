@@ -13,7 +13,9 @@
 		"typecheck": "tsc --noEmit",
 		"format": "prettier --write  ./src/**/*.{ts,tsx,js,jsx,json,md}",
 		"format:check": "prettier --check ./src/**/*.{ts,tsx,js,jsx,json,md}",
-		"ci-check": "contentlayer dev && pnpm lint && pnpm typecheck && pnpm format:check"
+		"ci-check": "contentlayer build && pnpm lint && pnpm typecheck && pnpm format:check",
+		"fix-all": "pnpm format && pnpm lint:fix",
+		"push": "pnpm fix-all && git commit -am '${m}' && git push" 
 	},
 	"dependencies": {
 		"@radix-ui/react-avatar": "^1.0.3",
