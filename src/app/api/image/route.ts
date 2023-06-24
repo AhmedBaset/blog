@@ -1,6 +1,6 @@
 import { createElement } from "react"
 import { ImageResponse, type NextRequest } from "next/server"
-
+ 
 export const runtime = "edge"
 
 export async function GET(req: NextRequest) {
