@@ -16,7 +16,7 @@ function Logo(props: Props) {
 				/>
 				<AvatarFallback>A</AvatarFallback>
 			</Avatar>
-			<span>{siteConfig.name}&apos;s Blog</span>
+			<span>{siteConfig.name.split(" ")[0]}&apos;s Blog</span>
 		</div>
 	)
 }
