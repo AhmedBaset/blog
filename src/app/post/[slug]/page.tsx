@@ -1,9 +1,15 @@
-import { Metadata } from "next"
-import { notFound } from "next/navigation"
-import { allPosts, Post } from "contentlayer/generated"
-import { format } from "date-fns"
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { allPosts, Post } from "contentlayer/generated";
+import { format } from "date-fns";
 
-import { getImage } from "@/lib/getImage"
+
+
+import { getImage } from "@/lib/getImage";
+
+
+
+
 
 function getPost(slug: string): Post {
 	const post = allPosts.find((post) => post.url === slug)
@@ -40,9 +46,9 @@ export function generateMetadata({ params: { slug } }: Props): Metadata {
 	}
 }
 
-// export function generateStaticPaths(): Path {
-
-// }
+export function generateStaticParams() {
+	return allPosts.map((post) => ({ slug: post.url }))
+}
 
 function page({ params: { slug } }: Props) {
 	const post = getPost(slug)
@@ -54,7 +60,9 @@ function page({ params: { slug } }: Props) {
 				<p>{post.description}</p>
 				<p>{format(new Date(post.date), "MMMM dd, yyyy")}</p>
 			</header>
-			<article></article>
+			<article>
+				<MDX />
+			</article>
 		</main>
 	)
 }

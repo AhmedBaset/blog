@@ -1,8 +1,11 @@
 import Image from "next/image"
-import { UserAddIcon } from "lucide-react"
-import Button from "@shadcn/Button"
-import siteConfig from "@/config/site.config"
+import { UserPlus } from "lucide-react"
+
+import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
+import { Button } from "@shadcn/button"
+
+import SocialLinks from "./SocialLinks"
 
 interface AboutMeProps {}
 
@@ -27,7 +30,11 @@ function AboutMe({}: AboutMeProps) {
 				<p className="text-slate-700 dark:text-slate-300">
 					{siteConfig.bio}
 				</p>
-            <Button><UserAddIcon className="w-5 h-5 mr-2" />Follow</Button>
+				<Button className="space-x-2">
+					<UserPlus className="mr-2 h-5 w-5" />
+					Follow
+				</Button>
+				<SocialLinks />
 			</div>
 		</section>
 	)

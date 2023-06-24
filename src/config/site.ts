@@ -75,4 +75,4 @@ export const siteConfig = {
 			Icon: BadgeIcon,
 		},
 	],
-}
+} as const

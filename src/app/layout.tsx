@@ -5,6 +5,8 @@ import { Montserrat } from "next/font/google"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
+import AboutMe from "@/components/AboutMe"
+import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import Providers from "@/components/Providers"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
@@ -44,6 +46,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
 				<Providers>
 					<Header />
 					{children}
+					<AboutMe />
+					<Footer />
 					<TailwindIndicator />
 				</Providers>
 			</body>
