@@ -1,4 +1,4 @@
-import { MenuIcon } from "lucide-react"
+import { MenuIcon, X } from "lucide-react"
 
 import { siteConfig } from "@/config/site"
 import { Button } from "@shadcn/button"
@@ -15,26 +15,31 @@ function MobileNavMenu() {
 					<MenuIcon />
 				</Button>
 			</SheetTrigger>
-			<SheetContent>
-				<div className="flex-center justify-between bg-blue-500 px-2 py-8">
+			<SheetContent side="left" className="w-full bg-slate-900/90 p-0">
+				<div className="flex-center justify-between bg-slate-800 px-4 py-8">
 					<Logo />
-					<SheetClose />
+					<SheetClose /> {/* TODO: Fix close button */}
 				</div>
-				<div>
-					<h2 className="font-semibold uppercase text-slate-500/70">
+				<div className="mt-4 p-4">
+					<h2 className="mb-2 font-extrabold uppercase text-slate-500">
 						BLOG MENU
 					</h2>
 					<ul className="flex flex-col gap-2">
 						{siteConfig.navLinks.map(({ name, href, Icon }) => (
-							<li key={href} className="space-x-2">
-								<Icon />
-								<span>{name}</span>
+							<li key={href}>
+								<Button
+									variant="ghost"
+									className="flex w-full justify-start gap-2 rounded-full"
+								>
+									<Icon />
+									<span>{name}</span>
+								</Button>
 							</li>
 						))}
 					</ul>
 				</div>
-				<div>
-					<h2 className="font-semibold uppercase text-slate-500/70">
+				<div className="mt-4 p-4">
+					<h2 className="font-extrabold uppercase text-slate-500">
 						BLOG SOCIAL
 					</h2>
 					<SocialLinks />
