@@ -4,6 +4,10 @@ import { useMDXComponent } from "next-contentlayer/hooks"
 
 import { cn } from "@/lib/utils"
 
+/*
+
+// TODO: Config this and use it instead of `@tailwindcss/typography`
+
 const elements = [
 	{
 		tag: "h1",
@@ -62,12 +66,20 @@ const components = elements.reduce((acc, { tag, classNames, component }) => {
 	}
 })
 
+*/
+
+const components = {
+	img: ({ src, alt, ...props }: any) => (
+		<Image src={src} alt={alt} {...props} />
+	),
+}
+
 interface MdxProps {
 	code: string
 }
 
-export function Mdx({ code }: MdxProps) {
+export function MDX({ code }: MdxProps) {
 	const Component = useMDXComponent(code)
 
-	return <Component components={components as any} /> 
+	return <Component components={components as any} />
 }
