@@ -1,11 +1,13 @@
+import Link from "next/link"
+
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Avatar, AvatarFallback, AvatarImage } from "@shadcn/avatar"
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {}
-function Logo(props: Props) {
+function Logo({ className, ...props }: Props) {
 	return (
-		<div className={cn("flex-center gap-2", props.className)} {...props}>
+		<Link href="/" className={cn("flex-center gap-2", className)} {...props}>
 			<Avatar>
 				<AvatarImage
 					src={siteConfig.image}
@@ -16,8 +18,10 @@ function Logo(props: Props) {
 				/>
 				<AvatarFallback>A</AvatarFallback>
 			</Avatar>
-			<span>{siteConfig.name.split(" ")[0]}&apos;s Blog</span>
-		</div>
+			<span className="font-semibold">
+				{siteConfig.name.split(" ")[0]}&apos;s Blog
+			</span>
+		</Link>
 	)
 }
 
