@@ -25,6 +25,7 @@ export const metadata: Metadata = {
 		shortcut: "/favicon-16x16.png",
 		apple: "/apple-touch-icon.png",
 	},
+	metadataBase: new URL("https://blog-A7med3bdulBaset.vercel.app")
 }
 
 const inter = Montserrat({ subsets: ["latin"] })

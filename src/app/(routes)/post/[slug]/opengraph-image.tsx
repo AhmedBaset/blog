@@ -1,23 +1,20 @@
-import { NextRequest } from "next/server";
-import { ImageResponse } from "@vercel/og";
-import { getPost } from "./page";
+import { NextRequest } from "next/server"
+import { ImageResponse } from "@vercel/og"
 
-
-
-
+import { getPost } from "@/lib/getPost"
 
 export const runtime = "edge"
 
-const montserratRegular = fetch(
-	new URL("./../../../../assets/fonts/Montserrat-Regular.ttf", import.meta.url)
-).then((res) => res.arrayBuffer())
+// const montserratRegular = fetch(
+// 	new URL("./../../../../assets/fonts/Montserrat-Regular.ttf", import.meta.url)
+// ).then((res) => res.arrayBuffer())
 
-const montserratExtraBold = fetch(
-	new URL(
-		"./../../../../assets/fonts/Montserrat-ExtraBold.ttf",
-		import.meta.url
-	)
-).then((res) => res.arrayBuffer())
+// const montserratExtraBold = fetch(
+// 	new URL(
+// 		"./../../../../assets/fonts/Montserrat-ExtraBold.ttf",
+// 		import.meta.url
+// 	)
+// ).then((res) => res.arrayBuffer())
 
 interface Props {
 	params: {
@@ -25,10 +22,10 @@ interface Props {
 	}
 }
 
-export default async function og({ params: {slug} }: Props) {
+export default async function og({ params: { slug } }: Props) {
 	try {
-		const fontRegular = await montserratRegular
-		const fontBold = await montserratExtraBold
+		// const fontRegular = await montserratRegular
+		// const fontBold = await montserratExtraBold
 
 		const values = getPost(slug)
 
@@ -111,18 +108,18 @@ export default async function og({ params: {slug} }: Props) {
 				width: 800,
 				height: 450,
 				fonts: [
-					{
-						name: "font",
-						data: fontRegular,
-						weight: 400,
-						style: "normal",
-					},
-					{
-						name: "font",
-						data: fontBold,
-						weight: 700,
-						style: "normal",
-					},
+					// {
+					// 	name: "font",
+					// 	data: fontRegular,
+					// 	weight: 400,
+					// 	style: "normal",
+					// },
+					// {
+					// 	name: "font",
+					// 	data: fontBold,
+					// 	weight: 700,
+					// 	style: "normal",
+					// },
 				],
 			}
 		)

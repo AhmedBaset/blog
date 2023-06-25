@@ -3,18 +3,18 @@ import { ImageResponse } from "@vercel/og"
 
 export const runtime = "edge"
 
-const montserratRegular = fetch(
-	new URL("./../../../assets/fonts/Montserrat-Regular.ttf", import.meta.url)
-).then((res) => res.arrayBuffer())
+// const montserratRegular = fetch(
+// 	new URL("./../../../assets/fonts/Montserrat-Regular.ttf", import.meta.url)
+// ).then((res) => res.arrayBuffer())
 
-const montserratExtraBold = fetch(
-	new URL("./../../../assets/fonts/Montserrat-ExtraBold.ttf", import.meta.url)
-).then((res) => res.arrayBuffer())
+// const montserratExtraBold = fetch(
+// 	new URL("./../../../assets/fonts/Montserrat-ExtraBold.ttf", import.meta.url)
+// ).then((res) => res.arrayBuffer())
 
 export async function GET(req: NextRequest) {
 	try {
-		const fontRegular = await montserratRegular
-		const fontBold = await montserratExtraBold
+		// const fontRegular = await montserratRegular
+		// const fontBold = await montserratExtraBold
 
 		const { searchParams } = req.nextUrl
 		const values = {
@@ -102,18 +102,18 @@ export async function GET(req: NextRequest) {
 				width: 800,
 				height: 450,
 				fonts: [
-					{
-						name: "font",
-						data: fontRegular,
-						weight: 400,
-						style: "normal",
-					},
-					{
-						name: "font",
-						data: fontBold,
-						weight: 700,
-						style: "normal",
-					},
+					// {
+					// 	name: "font",
+					// 	data: fontRegular,
+					// 	weight: 400,
+					// 	style: "normal",
+					// },
+					// {
+					// 	name: "font",
+					// 	data: fontBold,
+					// 	weight: 700,
+					// 	style: "normal",
+					// },
 				],
 			}
 		)

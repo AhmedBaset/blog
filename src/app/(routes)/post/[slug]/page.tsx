@@ -1,17 +1,11 @@
 import { Metadata } from "next"
 import Image from "next/image"
-import { notFound } from "next/navigation"
-import { allPosts, Post } from "contentlayer/generated"
+import { allPosts } from "contentlayer/generated"
 
 import { getImage } from "@/lib/getImage"
+import { getPost } from "@/lib/getPost"
 import AboutMe from "@/components/AboutMe"
 import { MDX } from "@/components/MDX"
-
-export function getPost(slug: string): Post {
-	const post = allPosts.find((post) => post.url === slug)
-	if (!post) notFound()
-	return post
-}
 
 interface Props {
 	params: {
