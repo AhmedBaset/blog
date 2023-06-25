@@ -11,8 +11,6 @@ import {
 	CardTitle,
 } from "@shadcn/card"
 import { Skeleton } from "@shadcn/skeleton"
-import Image from "next/image"
-import { Suspense } from "react"
 
 export default async function PostCard({ title, description, url }: Post) {
 	return (
@@ -24,15 +22,14 @@ export default async function PostCard({ title, description, url }: Post) {
 					 * and next/image will not render anything
 					 * TODO: UPDATE THIS
 					 */}
-					{/* esalint-disable @next/next/no-img-element */}
-					<Suspense fallback={<Skeleton className="aspect-video w-full rounded-lg" />}>
-					<Image
+					{/* eslint-disable @next/next/no-img-element */}
+					<img
 						src={getImage({ title, description, url })}
 						alt={title}
 						className="aspect-video w-full rounded-lg"
 						width={300}
 						height={200}
-					/></Suspense>
+					/>
 				</CardContent>
 				<CardHeader>
 					<CardTitle className="mb-2 decoration-sky-500/50 decoration-wavy underline-offset-4 group-hover:underline">
