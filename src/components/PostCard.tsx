@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
 import { Post } from "contentlayer/generated"
@@ -19,7 +17,7 @@ export default async function PostCard({ title, description, url }: Post) {
 		<Link href={`/post/${url}`} className="group">
 			<Card>
 				<CardContent className="p-0">
-					<Image
+					<img
 						src={`https://blog-a7med3bdulbaset.vercel.app/api/og`}
 						// src={getImage({ title, description, url })}
 						alt={title}
