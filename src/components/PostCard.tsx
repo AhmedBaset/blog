@@ -1,4 +1,4 @@
-
+"use client"
 
 import Image from "next/image"
 import Link from "next/link"
@@ -20,7 +20,7 @@ export default async function PostCard({ title, description, url }: Post) {
 			<Card>
 				<CardContent className="p-0">
 					<Image
-						src={"/api/og"}
+						src={`${process.env.NEXT_PUBLIC_URL}/api/og`}
 						// src={getImage({ title, description, url })}
 						alt={title}
 						className="aspect-video w-full rounded-lg"
