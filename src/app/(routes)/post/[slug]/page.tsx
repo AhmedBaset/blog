@@ -1,6 +1,5 @@
 import { Metadata } from "next"
 import Image from "next/image"
-import { allPosts } from "contentlayer/generated"
 
 import { getImage } from "@/lib/getImage"
 import { getPost } from "@/lib/getPost"
@@ -61,7 +60,8 @@ function page({ params: { slug } }: Props) {
 				<h1 className="text-5xl font-bold">{post.title}</h1>
 				<p className="text-opacity-70">{post.description}</p>
 				<p className="text-sm">{formatter.format(new Date(post.date))}</p>
-				<Image
+				{/* eslint-disable @next/next/no-img-element */}
+				<img
 					width={800}
 					height={200}
 					src={getImage(post)}
