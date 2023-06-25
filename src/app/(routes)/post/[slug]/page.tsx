@@ -7,7 +7,7 @@ import { getImage } from "@/lib/getImage"
 import AboutMe from "@/components/AboutMe"
 import { MDX } from "@/components/MDX"
 
-function getPost(slug: string): Post {
+export function getPost(slug: string): Post {
 	const post = allPosts.find((post) => post.url === slug)
 	if (!post) notFound()
 	return post
@@ -20,8 +20,7 @@ interface Props {
 }
 
 export function generateMetadata({ params: { slug } }: Props): Metadata {
-	const post = getPost(slug)
-	const { title, description } = post
+	const { title, description, url } = getPost(slug)
 
 	return {
 		title,
@@ -32,7 +31,7 @@ export function generateMetadata({ params: { slug } }: Props): Metadata {
 			type: "article",
 			images: [
 				{
-					url: getImage(post),
+					url: getImage({ title, description, url }),
 					alt: title,
 					width: 800,
 					height: 450,
@@ -42,6 +41,9 @@ export function generateMetadata({ params: { slug } }: Props): Metadata {
 		twitter: {
 			card: "summary_large_image",
 			creator: "@A7med3bdulBaset",
+			title,
+			description,
+			images: [getImage({ title, description, url })],
 		},
 	}
 }
@@ -73,8 +75,8 @@ function page({ params: { slug } }: Props) {
 					className="rounded-lg"
 				/>
 			</header>
-			<div className="grid items-start gap-4 bg-white py-12 dark:bg-slate-950 md:grid-cols-5">
-				<article className="prose col-span-3 dark:prose-invert">
+			<div className="grid items-start gap-8 bg-white py-12 dark:bg-slate-950 md:grid-cols-7">
+				<article className="prose col-span-5 dark:prose-invert">
 					<MDX code={post.body.code} />
 				</article>
 				<AboutMe className="sticky top-8 col-span-2" />

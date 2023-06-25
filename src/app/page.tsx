@@ -1,13 +1,10 @@
 import { allPosts } from "contentlayer/generated"
-import { compareDesc } from "date-fns"
 
 import AboutMe from "@/components/AboutMe"
 import PostCard from "@/components/PostCard"
 
 export default async function Index() {
-	const posts = allPosts.sort((a, b) =>
-		compareDesc(new Date(a.date), new Date(b.date))
-	)
+	const posts = allPosts.sort((a, b) => b.date.localeCompare(a.date))
 
 	// Simulate a slow connection
 	// await new Promise((resolve) => setTimeout(resolve, 10_000));

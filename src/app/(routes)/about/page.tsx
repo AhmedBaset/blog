@@ -7,6 +7,9 @@ function page() {
 			<h1 className="text-5xl font-extrabold">{siteConfig.name}</h1>
 			<p className="text-opacity-70">{siteConfig.bio}</p>
 			<Badge>TODO:</Badge> <span>add more content</span>
+			<h2 className="text-3xl font-bold">
+				This page is just a placeholder to test the navigation functionality
+			</h2>
 			<p>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui libero
 				dignissimos nesciunt excepturi quisquam animi, eum necessitatibus
