@@ -1,34 +1,41 @@
-# Next.js Starter Template
+# My Blog 📝
 
-This template is up to Next.js 13.4.7. Please run `npm update` after creating your project.
+This is my blog, built with Next.js and Tailwind CSS.
 
-## Usage
+![ScreenShot](/src/assets/screenshots/screenshot-home.png)
 
-```bash
-# with pnpm
-pnpm dlx create next-app -e https://github.com/A7med3bdulBaset/next-template
+## Stack 📚:
 
-# with npm
-npx create-next-app -e https://github.com/A7med3bdulBaset/next-template
+- `TypeScript` 5.1.3
+- `Next.js` 13.4 and `React.js`
+- `TailwindCSS` 3.2 and its plugins.
+- `MDX` with [contentlayer](https://contentlayer.dev).
+- [Shadcn/ui](https://ui.shadcn.com) and [Radix-ui](https://radix-ui.com).
+- [Lucide](https://lucide.dev) icons.
+- [Remark](https://remark.js.org), [rehype](https://github.com/rehypejs/rehype) and their ecosystem.
+- [vercel/og](https://vercel.com/docs/concepts/functions/.edge-functions/og-image-generation).
+- [next-themes](https://github.com/pacocoursey/next-themes).
+- `cslx`, `class-variance-authority`, and `tw-merge`.
+- `EsLint`, `Prettier`, and their ecosystem.
 
-# with yarn
-yarn create next-app -e https://github.com/A7med3bdulBaset/next-template
-```
+## Features 🎉:
 
-## Features
+- Type safety with TypeScript.
+- Next.js new App Router.
+- Dark and light mode with `next-themes`.
+- Auto generated Open Graph images with `vercel/og`.
+- Tailwind CSS class sorting, merging and linting.
+- Beutiful UI with `Shadcn/ui` and `Radix-ui`.
+- Beutiful icons with `Lucide`.
+- MDX
+- Linting with `EsLint` and formatting with `Prettier`.
+- Github Actions for CI.
 
--  Next.js 13 App Directory
--  Tailwind CSS and [Shadcn/ui](https://ui.shadcn.com)
--  Icons from [Lucide](https://lucide.dev)
--  Dark mode with `next-themes`
--  Tailwind CSS class sorting, merging and linting.
--  ESLint with `eslint-config-next`, `eslint-config-prettier` and `eslint-plugin-tailwindcss`
--  Prettier with sorting imports and tailwindcss plugin
--  Github Actions for CI
 
-## Scripts
 
-This template uses `pnpm` as the package manager. If you want to use other package managers, you can delete `pnpm-lock.yaml` and run `npm install` or `yarn install`.
+## Scripts 📜:
+
+This project is built upon [A7med3bdulBaset/next-template](https://github.com/A7med3bdulBaset/next-template), so it uses `pnpm` as the package manager. If you want to use other package managers, you can delete `pnpm-lock.yaml` and run `npm install` or `yarn install`.
 
 - `dev`: Start development server
 - `build`: Build for production
@@ -39,7 +46,14 @@ This template uses `pnpm` as the package manager. If you want to use other packa
 - `format:check`: Check code formatting
 - `typecheck`: Check types
 - `ci-check`: Run all checks
+- `fix-all`: Fix all linting and formatting errors
 
-## Inspiration
+## Inspiration 🎨:
 
-Inspired by [next-template](https://github.com/shadcn/next-template) by [Shadcn](https://github.com/shadcn)
+Inspired by [formaline'blog](https://blog.fromaline.com/) design, and [Shadcn](https://github.com/shadcn/taxonomy) code style.
+
+## Contributing 🤝:
+
+Feel free to open an issue or a pull request.
+
+If you have read all of this, please star the repo, it will help me a lot ❤️.
