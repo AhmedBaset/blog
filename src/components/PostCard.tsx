@@ -20,7 +20,7 @@ export default async function PostCard({ title, description, url }: Post) {
 			<Card>
 				<CardContent className="p-0">
 					<Image
-						src={`${process.env.NEXT_PUBLIC_URL}/api/og`}
+						src={`https://blog-a7med3bdulbaset.vercel.app/api/og`}
 						// src={getImage({ title, description, url })}
 						alt={title}
 						className="aspect-video w-full rounded-lg"
