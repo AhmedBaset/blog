@@ -7,5 +7,11 @@ export function getImage({ title, description, url }: Partial<Post>) {
 	ogUrl.searchParams.set("description", description ?? "")
 	ogUrl.searchParams.set("url", url ?? "")
 
+	
+
 	return ogUrl.toString()
+}
+
+function normalize(text: string) {
+	return encodeURI(text)
 }
