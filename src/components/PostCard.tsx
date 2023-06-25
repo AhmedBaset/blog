@@ -17,11 +17,11 @@ export default async function PostCard({ title, description, url }: Post) {
 		<Link href={`/post/${url}`} className="group">
 			<Card>
 				<CardContent className="p-0">
-					{/** 
+					{/**
 					 * We don't use next/image here because the route take some time to load
 					 * and next/image will not render anything
 					 * TODO: UPDATE THIS
-					*/}
+					 */}
 					{/* eslint-disable @next/next/no-img-element */}
 					<img
 						src={getImage({ title, description, url })}

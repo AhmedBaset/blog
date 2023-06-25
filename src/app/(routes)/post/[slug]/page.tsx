@@ -1,11 +1,11 @@
 import { Metadata } from "next"
 import Image from "next/image"
+import { allPosts } from "contentlayer/generated"
 
 import { getImage } from "@/lib/getImage"
 import { getPost } from "@/lib/getPost"
 import AboutMe from "@/components/AboutMe"
 import { MDX } from "@/components/MDX"
-import { allPosts } from "contentlayer/generated"
 
 interface Props {
 	params: {

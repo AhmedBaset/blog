@@ -1,25 +1,14 @@
+import "@/styles/globals.css"
 
+import { Metadata } from "next"
+import { Montserrat } from "next/font/google"
 
-
-import "@/styles/globals.css";
-
-
-
-import { Metadata } from "next";
-import { Montserrat } from "next/font/google";
-
-
-
-import { siteConfig } from "@/config/site";
-import { cn } from "@/lib/utils";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Providers from "@/components/Providers";
-import { TailwindIndicator } from "@/components/tailwind-indicator";
-
-
-
-
+import { siteConfig } from "@/config/site"
+import { cn } from "@/lib/utils"
+import Footer from "@/components/Footer"
+import Header from "@/components/Header"
+import Providers from "@/components/Providers"
+import { TailwindIndicator } from "@/components/tailwind-indicator"
 
 export const metadata: Metadata = {
 	title: {
