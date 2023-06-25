@@ -16,7 +16,7 @@ export default async function Index() {
 					Welcome to my blog!
 				</h1>
 
-				<div className="grid-cols-auto mb-4 grid gap-3">
+				<div className="grid-cols-auto mb-4 grid gap-3 items-stretch">
 					{posts.map((post, idx) => (
 						<PostCard key={idx} {...post} />
 					))}
