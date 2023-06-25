@@ -39,7 +39,7 @@ export async function GET(req: NextRequest) {
 					</p>
 					<div tw="max-w-[80%] h-[2.5rem] bg-[#133c7f] text-white flex justify-start items-center rounded-[0.35rem]">
 						<span tw="w-4 whitespace-nowrap"> </span>
-						<span>
+						<span className="line-clamp-1 text-ellipsis">
 							{process.env.NEXT_PUBLIC_URL}/{values.url}
 						</span>
 						<span tw="w-4 whitespace-nowrap"> </span>
