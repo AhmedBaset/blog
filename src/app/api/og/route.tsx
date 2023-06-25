@@ -30,61 +30,19 @@ export async function GET(req: NextRequest) {
 
 		return new ImageResponse(
 			(
-				<div
-					style={{
-						width: "100%",
-						height: "100%",
-						backgroundImage: `linear-gradient(45deg, #0b1120, #0d3256)`,
-						display: "flex",
-						justifyContent: "center",
-						alignItems: "center",
-						flexDirection: "column",
-					}}
-				>
-					<h2
-						key="title"
-						style={{
-							color: "white",
-							fontSize: "3rem",
-							fontFamily: "font",
-							fontWeight: "800",
-							width: "80%",
-						}}
-					>
+				<div tw="w-full h-full bg-gradient-to-br from-[#0b1120] to-[#0d3256] flex justify-center items-center flex-col">
+					<h2 tw="text-white font-sans font-extrabold w-[80%] text-3xl">
 						{values.title}
 					</h2>
-					<p
-						key="description"
-						style={{
-							color: "#ccc",
-							fontSize: "1rem",
-							fontFamily: "font",
-							fontWeight: "400",
-							width: "80%",
-							lineHeight: "1.5rem",
-							lineClamp: "2rem",
-						}}
-					>
+					<p tw="text-slate-300 font-sans w-[80%] line-clamp-3 leading-6">
 						{values.description}
 					</p>
-					<div
-						tw="max-w-[80%] h-[2.5rem] bg-[#133c7f] text-white flex justify-start items-center rounded-[0.35rem]"
-					>
-						<span
-							key="space"
-							style={{ width: "1rem", whiteSpace: "nowrap" }}
-						>
-							{" "}
-						</span>
-						<span key="link" style={{ fontSize: "1rem" }}>
+					<div tw="max-w-[80%] h-[2.5rem] bg-[#133c7f] text-white flex justify-start items-center rounded-[0.35rem]">
+						<span tw="w-4 whitespace-nowrap"> </span>
+						<span>
 							{process.env.NEXT_PUBLIC_URL}/{values.url}
 						</span>
-						<span
-							key="space-2"
-							style={{ width: "1rem", whiteSpace: "nowrap" }}
-						>
-							{" "}
-						</span>
+						<span tw="w-4 whitespace-nowrap"> </span>
 					</div>
 				</div>
 			),
@@ -92,18 +50,18 @@ export async function GET(req: NextRequest) {
 				width: 800,
 				height: 450,
 				// fonts: [
-					// {
-					// 	name: "font",
-					// 	data: fontRegular,
-					// 	weight: 400,
-					// 	style: "normal",
-					// },
-					// {
-					// 	name: "font",
-					// 	data: fontBold,
-					// 	weight: 700,
-					// 	style: "normal",
-					// },
+				// {
+				// 	name: "font",
+				// 	data: fontRegular,
+				// 	weight: 400,
+				// 	style: "normal",
+				// },
+				// {
+				// 	name: "font",
+				// 	data: fontBold,
+				// 	weight: 700,
+				// 	style: "normal",
+				// },
 				// ],
 			}
 		)
