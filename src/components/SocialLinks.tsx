@@ -13,7 +13,7 @@ function SocialLinks({
 	...props
 }: React.HTMLAttributes<HTMLUListElement>) {
 	return (
-		<ul className={cn("flex flex-wrap gap-2", className)} {...props}>
+		<ul className={cn("flex flex-wrap", className)} {...props}>
 			{siteConfig.links.map(({ label, href, Icon }) => (
 				<li key={href}>
 					<Tooltip>
