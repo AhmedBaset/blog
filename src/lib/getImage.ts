@@ -1,24 +1,11 @@
 import { Post } from "contentlayer/generated"
 
-export function getImage(post: Partial<Post>) {
-	return [
-		"/api/image?title=",
-		encodeURI(post.title || ""),
-		"&description=",
-		encodeURI(post.description || ""),
-		"&link=",
-		"post/" + encodeURI(post.url || ""),
-	].join("")
-}
+export function getImage({ title, description, url }: Partial<Post>) {
+	const APP_URL = process.env.NEXT_PUBLIC_URL
+	const ogUrl = new URL(`/api/og`, APP_URL)
+	ogUrl.searchParams.set("title", title ?? "")
+	ogUrl.searchParams.set("description", description ?? "")
+	ogUrl.searchParams.set("url", url ?? "")
 
-function encodeURI(text: string) {
-	return encodeURIComponent(text)
-		.replace(/'/g, "%27")
-		.replace(/"/g, "%22")
-		.replace(/\./g, "%2E")
-		.replace(/\(/g, "%28")
-		.replace(/\)/g, "%29")
-		.replace(/\*/g, "%2A")
-		.replace(/\!/g, "%21")
-		.replace(/\/+/g, "%2F")
+	return ogUrl.toString()
 }
