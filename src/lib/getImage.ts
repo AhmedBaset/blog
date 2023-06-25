@@ -5,7 +5,7 @@ export function getImage({ title, description, url }: Partial<Post>) {
 	const ogUrl = new URL(`/api/og`, APP_URL)
 	ogUrl.searchParams.set("title", normalize(title ?? ""))
 	ogUrl.searchParams.set("description", normalize(description ?? ""))
-	ogUrl.searchParams.set("url", normalize(url ?? ""))
+	ogUrl.searchParams.set("url", url ?? "")
 
 	return ogUrl.toString()
 }
