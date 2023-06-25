@@ -68,17 +68,7 @@ export async function GET(req: NextRequest) {
 						{values.description}
 					</p>
 					<div
-						key="link-block"
-						style={{
-							maxWidth: "80%",
-							height: "2.5rem",
-							backgroundColor: "#133c7f",
-							color: "#fff",
-							display: "flex",
-							justifyContent: "flex-start",
-							alignItems: "center",
-							borderRadius: "0.35rem",
-						}}
+						tw="max-w-[80%] h-[2.5rem] bg-[#133c7f] text-white flex justify-start items-center rounded-[0.35rem]"
 					>
 						<span
 							key="space"

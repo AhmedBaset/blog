@@ -73,7 +73,6 @@ export default async function og({ params: { slug } }: Props) {
 						{values.description}
 					</p>
 					<div
-						key="link-block"
 						style={{
 							maxWidth: "80%",
 							height: "2.5rem",
