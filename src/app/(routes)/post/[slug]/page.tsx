@@ -23,21 +23,21 @@ export function generateMetadata({ params: { slug } }: Props): Metadata {
 			title,
 			description,
 			type: "article",
-			images: [
-				{
-					url: getImage({ title, description, url }),
-					alt: title,
-					width: 800,
-					height: 450,
-				},
-			],
+			// images: [
+			// 	{
+			// 		url: getImage({ title, description, url }),
+			// 		alt: title,
+			// 		width: 800,
+			// 		height: 450,
+			// 	},
+			// ],
 		},
 		twitter: {
 			card: "summary_large_image",
 			creator: "@A7med3bdulBaset",
 			title,
 			description,
-			images: [getImage({ title, description, url })],
+			// images: [getImage({ title, description, url })],
 		},
 	}
 }
