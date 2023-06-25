@@ -1,4 +1,8 @@
-import { Post } from "contentlayer/generated"
+import { Post } from "contentlayer/generated";
+
+
+
+
 
 export function getImage({ title, description, url }: Partial<Post>) {
 	const APP_URL = process.env.NEXT_PUBLIC_URL
@@ -11,5 +15,5 @@ export function getImage({ title, description, url }: Partial<Post>) {
 }
 
 function normalize(text: string) {
-	return text.replaceAll(/[^a-zA-Z0-9\s?!']/g, "")
+	return text.replaceAll(/[^a-zA-Z0-9\s?!'".,]/g, "")
 }

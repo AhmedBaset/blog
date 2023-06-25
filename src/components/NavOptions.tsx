@@ -6,7 +6,7 @@ import { Button } from "./ui/button"
 function NavOptions() {
 	return (
 		<div className="space-x-4">
-			<Button variant="ghost" size="icon">
+			<Button variant="ghost" size="icon" title="Search">
 				<Search />
 			</Button>
 			<Button variant="ghost" size="icon" className="sticky top-0" asChild>
