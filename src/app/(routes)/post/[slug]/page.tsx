@@ -1,11 +1,11 @@
+import { Suspense } from "react"
 import { Metadata } from "next"
-import Image from "next/image"
-import { allPosts } from "contentlayer/generated"
 
 import { getImage } from "@/lib/getImage"
 import { getPost } from "@/lib/getPost"
 import AboutMe from "@/components/AboutMe"
 import { MDX } from "@/components/MDX"
+import { Skeleton } from "@/components/ui/skeleton"
 
 interface Props {
 	params: {
@@ -56,6 +56,17 @@ function page({ params: { slug } }: Props) {
 					alt={post.title}
 					className="rounded-lg"
 				/>
+				<Suspense
+					fallback={<Skeleton className="aspect-video max-w-[800px]" />}
+				>
+					<img
+						width={800}
+						height={200}
+						src={getImage(post)}
+						alt={post.title}
+						className="rounded-lg"
+					/>
+				</Suspense>
 			</header>
 			<div className="grid items-start gap-8 bg-white py-12 dark:bg-slate-950 md:grid-cols-7">
 				<article className="prose col-span-5 dark:prose-invert">
