@@ -15,7 +15,8 @@ export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
 	name: "Ahmed AbdulBaset",
-	bio: "Full Stack Developer enjoying building things with Next.js",
+	// bio: "Full Stack Developer enjoying building things with Next.js",
+	bio: "Learning new things everyday",
 	username: "A7med3bdulBaset",
 	image: "https://github.com/A7med3bdulBaset.png",
 	links: [

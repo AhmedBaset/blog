@@ -42,9 +42,9 @@ export function generateMetadata({ params: { slug } }: Props): Metadata {
 	}
 }
 
-export function generateStaticParams() {
-	return allPosts.map((post) => ({ slug: post.url }))
-}
+// export function generateStaticParams() {
+// 	return allPosts.map((post) => ({ slug: post.url }))
+// }
 
 const formatter = new Intl.DateTimeFormat(undefined, {
 	year: "numeric",

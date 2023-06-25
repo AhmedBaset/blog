@@ -107,7 +107,7 @@ export default async function og({ params: { slug } }: Props) {
 			{
 				width: 800,
 				height: 450,
-				fonts: [
+				// fonts: [
 					// {
 					// 	name: "font",
 					// 	data: fontRegular,
@@ -120,7 +120,7 @@ export default async function og({ params: { slug } }: Props) {
 					// 	weight: 700,
 					// 	style: "normal",
 					// },
-				],
+				// ],
 			}
 		)
 	} catch (error) {

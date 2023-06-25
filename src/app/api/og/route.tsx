@@ -101,7 +101,7 @@ export async function GET(req: NextRequest) {
 			{
 				width: 800,
 				height: 450,
-				fonts: [
+				// fonts: [
 					// {
 					// 	name: "font",
 					// 	data: fontRegular,
@@ -114,7 +114,7 @@ export async function GET(req: NextRequest) {
 					// 	weight: 700,
 					// 	style: "normal",
 					// },
-				],
+				// ],
 			}
 		)
 	} catch (error) {
