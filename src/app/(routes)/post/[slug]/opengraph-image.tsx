@@ -1,5 +1,4 @@
-import { NextRequest } from "next/server"
-import { ImageResponse } from "@vercel/og"
+import { ImageResponse } from "next/server"
 
 import { getPost } from "@/lib/getPost"
 
