@@ -11,11 +11,5 @@ export function getImage({ title, description, url }: Partial<Post>) {
 }
 
 function normalize(text: string) {
-	return text
-		.replaceAll("!", "")
-		.replaceAll("?", "")
-		.replaceAll(".", "")
-		.replaceAll(",", "")
-		.replaceAll(":", "")
-		.replaceAll(";", "")
+	return text.replaceAll(/[^a-zA-Z0-9\s]/g, "")
 }
