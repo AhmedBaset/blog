@@ -1,14 +1,25 @@
-import "@/styles/globals.css"
 
-import { Metadata } from "next"
-import { Montserrat } from "next/font/google"
 
-import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
-import Footer from "@/components/Footer"
-import Header from "@/components/Header"
-import Providers from "@/components/Providers"
-import { TailwindIndicator } from "@/components/tailwind-indicator"
+
+import "@/styles/globals.css";
+
+
+
+import { Metadata } from "next";
+import { Montserrat } from "next/font/google";
+
+
+
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Providers from "@/components/Providers";
+import { TailwindIndicator } from "@/components/tailwind-indicator";
+
+
+
+
 
 export const metadata: Metadata = {
 	title: {
@@ -25,7 +36,7 @@ export const metadata: Metadata = {
 		shortcut: "/favicon-16x16.png",
 		apple: "/apple-touch-icon.png",
 	},
-	metadataBase: new URL("https://blog-A7med3bdulBaset.vercel.app")
+	metadataBase: new URL("https://blog-a7med3bdulbaset.vercel.app/"),
 }
 
 const inter = Montserrat({ subsets: ["latin"] })
