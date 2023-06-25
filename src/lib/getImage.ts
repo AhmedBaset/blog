@@ -1,8 +1,4 @@
-import { Post } from "contentlayer/generated";
-
-
-
-
+import { Post } from "contentlayer/generated"
 
 export function getImage({ title, description, url }: Partial<Post>) {
 	const APP_URL = process.env.NEXT_PUBLIC_URL
