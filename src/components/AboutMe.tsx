@@ -5,6 +5,7 @@ import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Button } from "@shadcn/button"
 
+import Follow from "./Follow"
 import SocialLinks from "./SocialLinks"
 
 interface AboutMeProps {
@@ -17,10 +18,10 @@ function AboutMe({ isHome = false, className }: AboutMeProps) {
 		<section className={cn({ "flex-center": !isHome }, className)}>
 			<div
 				className={cn(
-					"bg-slate-50 dark:bg-slate-800",
+					"bg-sky-100 dark:bg-slate-800",
 					"flex-center flex-col gap-2 p-4",
 					{
-						"md:border-1 border-slate-500/20 md:sticky md:top-4 md:rounded-xl":
+						"md:border-1 border border-slate-500/30 shadow-lg shadow-secondary md:sticky md:top-4 md:rounded-xl":
 							!isHome,
 					}
 				)}
@@ -36,10 +37,7 @@ function AboutMe({ isHome = false, className }: AboutMeProps) {
 				<p className="text-slate-700 dark:text-slate-300">
 					{siteConfig.bio}
 				</p>
-				<Button className="space-x-2">
-					<UserPlus className="mr-2 h-5 w-5" />
-					Follow
-				</Button>
+				<Follow />
 				<SocialLinks />
 			</div>
 		</section>
