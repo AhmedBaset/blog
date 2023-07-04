@@ -6,11 +6,10 @@ interface Props extends React.ComponentProps<typeof Image> {
 }
 
 async function AwaitedImage({ src, alt, ...rest }: Props) {
-	const res = await fetch(src)
-	const blob = await res.blob()
-	const imageUrl = URL.createObjectURL(blob)
+	// Just to await untill the /api/og respond and cache
+	await fetch(src)
 
-	return <Image src={imageUrl} alt={alt} {...rest} />
+	return <Image src={src} alt={alt} {...rest} />
 }
 
 export default AwaitedImage

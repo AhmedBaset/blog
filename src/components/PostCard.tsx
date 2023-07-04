@@ -11,6 +11,8 @@ import {
 	CardTitle,
 } from "@shadcn/card"
 import { Skeleton } from "@shadcn/skeleton"
+import AwaitedImage from "./AwaitedImage"
+import Image from "next/image"
 
 export default async function PostCard({ title, description, url }: Post) {
 	return (
@@ -23,7 +25,14 @@ export default async function PostCard({ title, description, url }: Post) {
 					 * TODO: UPDATE THIS
 					 */}
 					{/* eslint-disable @next/next/no-img-element */}
-					<img
+					{/* <img
+						src={getImage({ title, description, url })}
+						alt={title}
+						className="aspect-video w-full rounded-lg"
+						width={300}
+						height={200}
+					/> */}
+					<AwaitedImage
 						src={getImage({ title, description, url })}
 						alt={title}
 						className="aspect-video w-full rounded-lg"
