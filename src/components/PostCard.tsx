@@ -12,7 +12,7 @@ import {
 } from "@shadcn/card"
 import { Skeleton } from "@shadcn/skeleton"
 
-export default async function PostCard({
+export default function PostCard({
 	title,
 	description,
 	url,
@@ -24,7 +24,7 @@ export default async function PostCard({
 				<CardContent className="p-0">
 					{image ? (
 						<Image
-							src={image}
+							src={`./../assets/images/${image}`}
 							alt={title}
 							className="aspect-video w-full rounded-lg"
 							width={300}
