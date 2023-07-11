@@ -11,7 +11,7 @@ interface ProviderProps {
 
 function Providers({ children }: ProviderProps) {
 	return (
-		<ThemeProvider enableSystem defaultTheme="system" attribute="class">
+		<ThemeProvider enableSystem defaultTheme="dark" attribute="class">
 			<TooltipProvider>{children}</TooltipProvider>
 		</ThemeProvider>
 	)
