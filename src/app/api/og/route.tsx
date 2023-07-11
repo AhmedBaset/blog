@@ -11,6 +11,7 @@ export const runtime = "edge"
 // 	new URL("./../../../assets/fonts/Montserrat-ExtraBold.ttf", import.meta.url)
 // ).then((res) => res.arrayBuffer())
 
+
 export async function GET(req: NextRequest) {
 	try {
 		// const fontRegular = await montserratRegular
@@ -98,8 +99,8 @@ export async function GET(req: NextRequest) {
 				</div>
 			),
 			{
-				width: 800,
-				height: 450,
+				width: 320,
+				height: 180,
 				// fonts: [
 				// {
 				// 	name: "font",
