@@ -13,7 +13,7 @@ function Footer() {
 						siteConfig.links.find((link) => link.label === "Github")
 							?.href || ""
 					}
-					className="text-primary underline underline-offset-2"
+					className="text-primary dark:text-white underline underline-offset-2"
 				>
 					{siteConfig.name}
 				</Link>

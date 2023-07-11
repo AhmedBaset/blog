@@ -33,7 +33,6 @@ export default async function PostCard({ title, description, url }: Post) {
 				</CardContent>
 				<CardHeader>
 					<CardTitle
-						is="h2"
 						className="mb-2 decoration-sky-500/50 decoration-wavy underline-offset-4 group-hover:underline"
 					>
 						{title}
