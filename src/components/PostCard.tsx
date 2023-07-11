@@ -12,12 +12,7 @@ import {
 } from "@shadcn/card"
 import { Skeleton } from "@shadcn/skeleton"
 
-export default function PostCard({
-	title,
-	description,
-	url,
-	image,
-}: Post) {
+export default function PostCard({ title, description, url, image }: Post) {
 	return (
 		<Link href={`/post/${url}`} className="group">
 			<Card>
