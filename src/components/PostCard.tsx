@@ -1,4 +1,5 @@
 // import Image from "next/image"
+import Image from "next/image"
 import Link from "next/link"
 import { Post } from "contentlayer/generated"
 
@@ -11,8 +12,8 @@ import {
 	CardTitle,
 } from "@shadcn/card"
 import { Skeleton } from "@shadcn/skeleton"
+
 import AwaitedImage from "./AwaitedImage"
-import Image from "next/image"
 
 export default async function PostCard({ title, description, url }: Post) {
 	return (
@@ -25,20 +26,20 @@ export default async function PostCard({ title, description, url }: Post) {
 					 * TODO: UPDATE THIS
 					 */}
 					{/* eslint-disable @next/next/no-img-element */}
-					{/* <img
-						src={getImage({ title, description, url })}
-						alt={title}
-						className="aspect-video w-full rounded-lg"
-						width={300}
-						height={200}
-					/> */}
-					<AwaitedImage
+					<img
 						src={getImage({ title, description, url })}
 						alt={title}
 						className="aspect-video w-full rounded-lg"
 						width={300}
 						height={200}
 					/>
+					{/* <AwaitedImage
+						src={getImage({ title, description, url })}
+						alt={title}
+						className="aspect-video w-full rounded-lg"
+						width={300}
+						height={200}
+					/> */}
 				</CardContent>
 				<CardHeader>
 					<CardTitle className="mb-2 decoration-sky-500/50 decoration-wavy underline-offset-4 group-hover:underline">

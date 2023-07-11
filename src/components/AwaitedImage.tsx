@@ -6,9 +6,6 @@ interface Props extends React.ComponentProps<typeof Image> {
 }
 
 async function AwaitedImage({ src, alt, ...rest }: Props) {
-	// Just to await untill the /api/og respond and cache
-	await fetch(src)
-
 	return <Image src={src} alt={alt} {...rest} />
 }
 
