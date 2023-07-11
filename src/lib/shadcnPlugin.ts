@@ -72,7 +72,7 @@ export const shadcnPlugin = plugin(
 					background: "hsl(var(--background))",
 					foreground: "hsl(var(--foreground))",
 					primary: {
-						DEFAULT: colors.sky["600"],
+						DEFAULT: colors.sky["700"],
 						foreground: colors.sky["100"],
 						...colors.sky,
 					},

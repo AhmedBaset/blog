@@ -12,6 +12,7 @@ function MobileNavMenu() {
 		<Sheet>
 			<SheetTrigger className="md:hidden" asChild>
 				<Button variant="outline" size="icon">
+					<span className="sr-only">Menu</span>
 					<MenuIcon />
 				</Button>
 			</SheetTrigger>
