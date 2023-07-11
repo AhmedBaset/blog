@@ -24,7 +24,7 @@ export default function PostCard({
 				<CardContent className="p-0">
 					{image ? (
 						<Image
-							src={`./../assets/images/${image}`}
+							src={`/blogs/${image}`}
 							alt={title}
 							className="aspect-video w-full rounded-lg"
 							width={300}
