@@ -1,4 +1,4 @@
-// import Image from "next/image"
+import Image from "next/image"
 import Link from "next/link"
 import { Post } from "contentlayer/generated"
 
@@ -12,29 +12,44 @@ import {
 } from "@shadcn/card"
 import { Skeleton } from "@shadcn/skeleton"
 
-export default async function PostCard({ title, description, url }: Post) {
+export default async function PostCard({
+	title,
+	description,
+	url,
+	image,
+}: Post) {
 	return (
 		<Link href={`/post/${url}`} className="group">
 			<Card>
 				<CardContent className="p-0">
-					{/**
-					 * We don't use next/image here because the route take some time to load
-					 * and next/image will not render anything
-					 * TODO: UPDATE THIS
-					 */}
-					{/* eslint-disable @next/next/no-img-element */}
-					<img
-						src={getImage({ title, description, url })}
-						alt={title}
-						className="aspect-video w-full rounded-lg"
-						width={300}
-						height={200}
-					/>
+					{image ? (
+						<Image
+							src={image}
+							alt={title}
+							className="aspect-video w-full rounded-lg"
+							width={300}
+							height={200}
+						/>
+					) : (
+						<>
+							{/**
+							 * We don't use next/image here because the route take some time to load
+							 * and next/image will not render anything
+							 * TODO: UPDATE THIS
+							 */}
+							{/* eslint-disable @next/next/no-img-element */}
+							<img
+								src={getImage({ title, description, url })}
+								alt={title}
+								className="aspect-video w-full rounded-lg"
+								width={300}
+								height={200}
+							/>
+						</>
+					)}
 				</CardContent>
 				<CardHeader>
-					<CardTitle
-						className="mb-2 decoration-sky-500/50 decoration-wavy underline-offset-4 group-hover:underline"
-					>
+					<CardTitle className="mb-2 decoration-sky-500/50 decoration-wavy underline-offset-4 group-hover:underline">
 						{title}
 					</CardTitle>
 					<CardDescription className="line-clamp-3 overflow-hidden text-ellipsis">

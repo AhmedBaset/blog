@@ -98,8 +98,11 @@ export async function GET(req: NextRequest) {
 				</div>
 			),
 			{
-				width: 800,
-				height: 450,
+				width: 320,
+				height: 180,
+				headers: {
+					"content-type": "image/webp",
+				},
 				// fonts: [
 				// {
 				// 	name: "font",
