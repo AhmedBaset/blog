@@ -40,7 +40,7 @@
 		"rehype-slug": "^5.1.0",
 		"remark": "^14.0.3",
 		"remark-gfm": "^3.0.1",
-		"sharp": "^0.32.1"
+		"sharp": "^0.32.6"
 	},
 	"devDependencies": {
 		"@ianvs/prettier-plugin-sort-imports": "^4.0.2",
