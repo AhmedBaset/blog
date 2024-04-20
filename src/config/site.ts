@@ -17,12 +17,12 @@ export const siteConfig = {
 	name: "Ahmed AbdulBaset",
 	// bio: "Full Stack Developer enjoying building things with Next.js",
 	bio: "Learning new things everyday",
-	username: "A7med3bdulBaset",
-	image: "https://github.com/A7med3bdulBaset.png",
+	username: "AhmedBaset",
+	image: "https://github.com/AhmedBaset.png",
 	links: [
 		{
 			label: "Github",
-			href: "https://github.com/A7med3bdulBaset",
+			href: "https://github.com/AhmedBaset",
 			Icon: GithubIcon,
 		},
 		{
