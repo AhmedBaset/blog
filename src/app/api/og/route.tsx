@@ -28,7 +28,7 @@ export async function GET(req: NextRequest) {
 				? values.title.slice(0, 100) + "..."
 				: values.title
 
-		return new ImageResponse(
+		return ImageResponse(
 			(
 				<div
 					style={{
