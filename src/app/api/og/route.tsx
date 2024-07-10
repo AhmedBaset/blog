@@ -1,5 +1,5 @@
 import { NextRequest } from "next/server"
-import { ImageResponse } from "@vercel/og"
+import { ImageResponse } from "next/og"
 
 export const runtime = "edge"
 
@@ -28,7 +28,7 @@ export async function GET(req: NextRequest) {
 				? values.title.slice(0, 100) + "..."
 				: values.title
 
-		return new ImageResponse(
+		return ImageResponse(
 			(
 				<div
 					style={{
